@@ -21,6 +21,7 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	color: #ababab;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
@@ -121,7 +122,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #777;
+		color: #ababab;
 		font-weight: 700;
 	}
 
@@ -134,7 +135,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #777;
+		color: #ababab;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
@@ -1853,7 +1854,7 @@ input, select, textarea {
 	}
 
 		header.major h2 + p {
-			color: #777;
+			color: #ababab;
 			font-size: 1.75em;
 			font-weight: 700;
 			margin-top: -0.75em;
@@ -1866,7 +1867,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #777;
+		color: #ababab;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 700;
@@ -1925,7 +1926,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #777;
+			color: #ababab;
 			background: #fff;
 		}
 
@@ -2109,23 +2110,31 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 /*Slidshow*/
-	#slideshow {
-		margin:  auto;
-		position: relative;
-		height: 400px;
-		padding: 10px;
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	.slideshow {
+		position: relative; 
+		width: 100%;
+		height: 500px; 
+		padding: 10px; 
 		background-color: grey;
 	}
+	.slideshow div{
+		text-align: center;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+		border: #222;
+		position: absolute; 
+		top: 10px; 
+		left: 10px; 
+		right: 10px; 
+		bottom: 10px; 
+	}
 		
-		#slideshow > div {
-			text-align: center;
-			
-		}
-		#slideshow > div img {
-			height: 300px;
-		}
-		
+	.slideshow div img{
+		height:100%;
+		width:100%;
+		max-width: 100%;
+		max-height: 100%;
+	}​
+
 /* Image */
 
 	.image {
@@ -2550,7 +2559,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #777;
+			color: #ababab;
 			font-size: 0.9em;
 			font-weight: 700;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2676,7 +2685,7 @@ input, select, textarea {
 		.button.alt {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px #e4e4e4;
-			color: #777 !important;
+			color: #ababab !important;
 		}
 
 			input[type="submit"].alt:hover,
@@ -2684,7 +2693,7 @@ input, select, textarea {
 			input[type="button"].alt:hover,
 			.button.alt:hover {
 				background-color: #f4f4f4;
-				color: #777 !important;
+				color: #ababab !important;
 			}
 
 			input[type="submit"].alt:active,
@@ -2917,12 +2926,13 @@ input, select, textarea {
 	}
 
 /* Main */
-
 	#main > section {
+		background-color: #2d2d2d;
 		border-top: solid 6px #f4f4f4;
 	}
 
 		#main > section > .container {
+			
 			padding: 6em 0 4em 0;
 		}
 
@@ -2997,6 +3007,7 @@ input, select, textarea {
 		/* Main */
 
 			#main > section > .container {
+				
 				padding: 4em 0 2em 0;
 			}
 
@@ -3095,6 +3106,7 @@ input, select, textarea {
 		/* Wrapper */
 
 			#wrapper {
+				
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -3170,7 +3182,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #4acaa8;
+						background: #696969;;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
@@ -3305,7 +3317,6 @@ input, select, textarea {
 			#main > section > .container {
 				padding: 2em 0 0 0;
 			}
-
 		/* Footer */
 
 			#footer {
