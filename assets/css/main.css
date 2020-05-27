@@ -21,7 +21,7 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	color: #ababab;
+	color: #d1cece;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
@@ -135,7 +135,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ababab;
+		color: #F6E4AD;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
@@ -1704,16 +1704,10 @@ input, select, textarea {
 						}
 
 		}
-/* Slideshow container */
-.slideshow-container {
-	max-width: 1000px;
-	position: relative;
-	margin: auto;
-  }
-  
+
   /* Caption text */
   .text {
-	color: #f2f2f2;
+	color: #ababab;
 	font-size: 15px;
 	padding: 8px 12px;
 	position: absolute;
@@ -1849,12 +1843,12 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #4acaa8;
+		color: #F6E4AD;
 		font-size: 3.5em;
 	}
 
 		header.major h2 + p {
-			color: #ababab;
+			color: #F6E4AD;
 			font-size: 1.75em;
 			font-weight: 700;
 			margin-top: -0.75em;
@@ -2115,7 +2109,7 @@ input, select, textarea {
 		width: 100%;
 		height: 500px; 
 		padding: 10px; 
-		background-color: grey;
+		background-color: #212121;
 	}
 	.slideshow div{
 		text-align: center;
@@ -2282,6 +2276,7 @@ input, select, textarea {
 		}
 
 			.image.avatar img {
+				border: 3px solid #79b3ee;
 				border-radius: 100%;
 				display: block;
 				width: 90%;
@@ -2468,21 +2463,25 @@ input, select, textarea {
 	}
 
 		ul.feature-icons li {
+			
 			text-decoration: none;
 			display: inline-block;
-			margin: 0 0 1.0em 0;
+			margin: 0 0 .8em 0;
 			padding: 0.10em 0 0 3.0em;
 			position: relative;
 			vertical-align: top;
 			width: 48%;
-			color: Orange;
-			text-shadow: 1px 1px 1px #ccc;
-			font-size: 1.5em;
+			color: #d1cece;
+			font-size: 1.2em;
 		}
 		ul.feature-icons li i {
-			color: Orange;
-			text-shadow: 1px 1px 1px #ccc;
-			font-size: 1.5em;
+			padding-right: 10px;
+			color: orange;
+			
+			font-size: 1.2em;
+		}
+		ul.feature-icons li img {
+			padding-right: 10px
 		}
 			ul.feature-icons li:before {
 				-moz-osx-font-smoothing: grayscale;
@@ -2791,6 +2790,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
+		border: 1px solid #79b3ee;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2803,7 +2803,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4acaa8;
+		background-image: linear-gradient( #020024 0%,#151552 60%,#21466c 100%);
 		color: #d2f2e9;
 		height: 100%;
 		overflow-y: auto;
@@ -2816,14 +2816,15 @@ input, select, textarea {
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
 			color: #ffffff;
+			
 		}
 
 			#header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
-				color: #ffffff;
+				color: #bcd9ec;
 			}
 
 		#header header p {
-			color: #b7eadc;
+			color: #bcd9ec;
 		}
 
 		#header a {
@@ -2839,13 +2840,15 @@ input, select, textarea {
 			-webkit-flex-shrink: 0;
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
-			padding: 3em;
+			padding: 2em;
 		}
 
 			#header > header .avatar {
+				border-radius: 0%;
 				display: block;
-				margin: 0 auto 2.25em auto;
-				width: 10em;
+				margin:auto;
+				width: 11em;
+				padding-bottom: 1em;
 			}
 
 			#header > header h1 {
@@ -2854,12 +2857,13 @@ input, select, textarea {
 			}
 
 			#header > header p {
-				color: #d2f2e9;
+				color: #bcd9ec;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
 
 		#header > footer {
+			
 			-moz-flex-shrink: 0;
 			-webkit-flex-shrink: 0;
 			-ms-flex-shrink: 0;
@@ -2875,7 +2879,7 @@ input, select, textarea {
 			}
 
 				#header > footer .icons li a {
-					color: #b7eadc;
+					color: orange;
 				}
 
 		#header > nav {
@@ -2892,7 +2896,7 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #5ccfb1;
+					border-top: solid 2px #79b3ee;
 					display: block;
 					padding: 0;
 				}
@@ -2910,8 +2914,8 @@ input, select, textarea {
 					}
 
 						#header > nav ul li a.active {
-							background: #fff;
-							color: #4acaa8 !important;
+							background: #212121;
+							color: #79b3ee !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -2927,8 +2931,8 @@ input, select, textarea {
 
 /* Main */
 	#main > section {
-		background-color: #2d2d2d;
-		border-top: solid 6px #f4f4f4;
+		background-color: #212121;
+		border-top: solid 6px #bcbcbc;
 	}
 
 		#main > section > .container {

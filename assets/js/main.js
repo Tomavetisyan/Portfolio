@@ -3,15 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-var slideIndex = 0;
-function myFunction(id) {
-	var x = document.getElementById(id);
-	if (x.style.display === "none") {
-	  x.style.display = "block";
-	} else {
-	  x.style.display = "none";
-	}
-  }	
+
 
   $(".slideshow div:gt(0)").hide();
 
