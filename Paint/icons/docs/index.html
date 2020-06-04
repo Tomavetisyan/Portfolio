@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <title>Project Narwhal</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="project.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="b1">
+                <div class ="b1-inner">
+                    <nav class="nav flex-column">
+                        <a class="selected" href="#" id="brush" onclick="changeTool('brush')"><img class="icons" src="icons/brush-icon.png"></a>
+                        <a href="#" id="spray-can" onclick="changeTool('spray-can')"><img class="icons" src="icons/spraycan-icon.png"></a>
+                        <a href="#" id="eraser" onclick="changeTool('eraser')"><img class="icons" src="icons/eraser-icon.png"></a>
+                        <a href="#" id="selection" onclick="changeTool('selection')"><img class="icons" src="icons/text-icon.png"></a>
+                        <a href="#" id="line" onclick="changeTool('line')"><img class="icons" src="icons/line-icon.png"></a>
+                        <div id="shape-dropdown"><img class="icons" src="icons/shapes-icon.png">
+                            <div class="shape-dropdown-content">
+                                    <a href="#" id="circle" onclick="changeTool('circle')"><img class="icons" src="icons/circle-icon.png"></a>
+                                    <a href="#" class="sides" id="polygon" onclick="changeTool('polygon')"><img class="icons" id="current-polygon" src="icons/triangle-icon.png"></a>
+                                    <div class="polygon-sides">
+                                        <input type="number" id="sides" name="sides" min="3" max="6" value="3" onchange="changeSides(this.value)">
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="color-dropdown"><img class="icons" src="icons/pallet-icon.png">
+                            <div class="color-dropdown-content">
+                                <a href="#" id="#000000" style="background:#000000" onclick="changeColor(this.id)"></a>
+                                <a href="#" id="#0000FF" style="background:#0000FF" onclick="changeColor(this.id)"></a>
+                                <a href="#" id="#FF0000" style="background:#FF0000" onclick="changeColor(this.id)"></a>
+                                <a href="#" id="#008000" style="background:#008000" onclick="changeColor(this.id)"></a>
+                                <a href="#" id="#FFFF00" style="background:#FFFF00" onclick="changeColor(this.id)"></a>
+                                <a href="#" id="#800080" style="background:#800080" onclick="changeColor(this.id)"></a>
+                                <a href="#" id="#FFA500" style="background:#FFA500" onclick="changeColor(this.id)"></a>
+                                <a href="#" id="#ADD8E6" style="background:#ADD8E6" onclick="changeColor(this.id)"></a>
+
+                                <input type="color" id="my-color">
+                                <div class="rgb-amount" id="rgb-amount"></div>
+                                    <input type="range" min="0" max="255" value="0" class="color-slider-r" id="color-slider-r" onchange="changeRGB(this.value,undefined,undefined)">
+                                    <input type="range" min="0" max="255" value="0" class="color-slider-g" id="color-slider-g" onchange="changeRGB(undefined,this.value,undefined)">
+                                    <input type="range" min="0" max="255" value="0" class="color-slider-b" id="color-slider-b" onchange="changeRGB(undefined,undefined,this.value)">
+                            </div>
+                        </div>
+                        <div class="color-dropdown"><img class="icons" src="icons/bg.png">
+                            <div class="color-dropdown-content">
+                                <a href="#" id="#000000-bg" style="background:#000000" onclick="changeColorBg('#000000')"></a>
+                                <a href="#" id="#0000FF-bg" style="background:#0000FF" onclick="changeColorBg('#0000FF')"></a>
+                                <a href="#" id="#FF0000-bg" style="background:#FF0000" onclick="changeColorBg('#FF0000')"></a>
+                                <a href="#" id="#008000-bg" style="background:#008000" onclick="changeColorBg('#008000')"></a>
+                                <a href="#" id="#FFFF00-bg" style="background:#FFFF00" onclick="changeColorBg('#FFFF00')"></a>
+                                <a href="#" id="#800080-bg" style="background:#800080" onclick="changeColorBg('#800080')"></a>
+                                <a href="#" id="#FFA500-bg" style="background:#FFA500" onclick="changeColorBg('#FFA500')"></a>
+                                <a href="#" id="#ADD8E6-bg" style="background:#ADD8E6" onclick="changeColorBg('#ADD8E6')"></a>
+
+                                <input type="color" id="my-color-bg">
+                                <br><br>
+                            </div>
+                        </div>
+                        <div class="size-dropdown"><img class="icons" src="icons/size-icon.png">
+                            <div class="size-dropdown-content">
+                                <input type="range" min="1" max="20" value="2" class="slider" id="my-range" onchange="changeLineWidth(this.value)">
+                                <div class="slider-amount" id="slider-amount"></div>
+                            </div>
+                        </div>
+                        <a id="demo"></a>
+                    </nav>
+                </div>
+            </div>
+            <div class="b2">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#"><img class="logo" src="icons/narwhal-icon.png">Project Narwhal<img class="logo" src="icons/narwhal-icon.png"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-supported-content">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                File
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                                  <a class="dropdown-item" id="new" onclick="clearCanvas()" href="#"><img class="nav-icons" src="icons/new-icon.png">New (White)</a>
+                                  <a class="dropdown-item" id="new" onclick="setTransparant(1)" href="#"><img class="nav-icons" src="icons/new-icon.png">New (Black)</a>
+                                  <a class="dropdown-item" id="new" onclick="setTransparant(0)" href="#"><img class="nav-icons" src="icons/new-icon.png">New (Transparant)</a>
+                                <a class="dropdown-item" id="open" onclick="openImage()" href="#"><img class="nav-icons" src="icons/open-icon.png">Open</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save As...</a>
+                                <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                                  <a class="dropdown-item" id="canvas-PNG" download="narwhal-image.png" onclick="saveImage(1)" href="#"><img class="nav-icons" src="icons/save-icon.png">PNG</a>
+                                  <a class="dropdown-item" id="canvas-JPG" download="narwhal-image.jpg" onclick="saveImage(2)" href="#"><img class="nav-icons" src="icons/save-icon.png">JPG</a>
+                                  <a class="dropdown-item" id="canvas-BMP" download="narwhal-image.bmp" onclick="saveImage(3)" href="#"><img class="nav-icons" src="icons/save-icon.png">BMP</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Help
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                                    <a class="dropdown-item" href="#">About</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        Width: <input id="width" type="number" name="width" min="100" onchange="changeWidth(this.value)">
+                        Height: <input id="height" type="number" name="height" min="100" onchange="changeHeight(this.value)">
+                    </div>
+                    <div id="undo-redo-btns">
+                        <button id="undo-btn" type="button" onClick="undo()">Undo</button>
+                        <button id="redo-btn" type="button" onClick="redo()">Redo</button>
+                    </div>
+                </nav>
+                <canvas id="my-canvas-bg" class="my-canvas-bg"></canvas>
+                <canvas id="my-canvas" class="my-canvas"></canvas>
+            </div>
+        </div>
+            <img id="temp-img" src="">
+    </body>
+</html>

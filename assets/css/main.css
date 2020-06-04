@@ -2107,13 +2107,13 @@ input, select, textarea {
 	.slideshow {
 		position: relative; 
 		width: 100%;
-		height: 500px; 
+		height: 375px; 
 		padding: 10px; 
 		background-color: #212121;
 	}
 	.slideshow div{
 		text-align: center;
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+		
 		border: #222;
 		position: absolute; 
 		top: 10px; 
@@ -2124,7 +2124,7 @@ input, select, textarea {
 		
 	.slideshow div img{
 		height:100%;
-		width:100%;
+		width:90%;
 		max-width: 100%;
 		max-height: 100%;
 	}​
@@ -2748,21 +2748,23 @@ input, select, textarea {
 /* Features */
 
 	.features article {
+		
 		border-top: solid 3px #f4f4f4;
 		margin-bottom: 2.25em;
 		padding-top: 2.25em;
 	}
-
 		.features article:first-child {
 			border-top: 0;
 			padding-top: 0;
 		}
 
 		.features article .image {
+			
 			display: inline-block;
 			padding-right: 2.5em;
 			vertical-align: middle;
 			width: 48%;
+			border:0;
 			
 		}
 
@@ -2771,6 +2773,7 @@ input, select, textarea {
 				width: 100%;
 				transition: transform .2s;
 				border: 2px;
+				border-color: #79b3ee;
 				border-style: solid;
 			}
 			.features article .image img:hover {
@@ -2782,6 +2785,10 @@ input, select, textarea {
 			vertical-align: middle;
 			width: 50%;
 		}
+			.features article .inner a {
+				color: #79b3ee;
+				border-color: #79b3ee;
+			}
 
 			.features article .inner > :last-child {
 				margin-bottom: 0;
