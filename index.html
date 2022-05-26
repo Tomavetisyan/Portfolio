@@ -17,7 +17,7 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="#one" class="active">About Me</a></li>
+						<!-- <li><a href="#one" class="active">About Me</a></li> -->
 						<li><a href="#two">Projects</a></li>
 						<li><a href="#three">Experience</a></li>
 						<li><a href="#four">Contact</a></li>
@@ -60,7 +60,7 @@
 									<h3>Projects</h3>
 									<p></p>
 									<div class="features">
-										<article>
+										<!-- <article>
 											<a href="https://github.com/Tomavetisyan/2D-Unity-Platformer" class="image"><img src="images/2DGame.png" alt="" /></a>
 											<div class="inner">
 												<h4>2D Unity</h4>
@@ -69,14 +69,15 @@
 													work on the Unity platform.
 												</p>
 											</div>
-										</article>
+										</article> -->
 										<article>
 											<a href="https://github.com/Tomavetisyan/CircuitPlaygroundExpress"  class="image"><img src="images/circuitBoard.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>Circuit Playground Express</h4>
-												<p>First attempt at working with some hardware. The PlayGRound Express has many fun little feature such as temperature sensors, light sensors, touch sensitivity and a LED light board.
-													I made a very quick replica of the Simon Says memorization game.
-												</p>
+												<p>The Playground Express is an interactive LED light board with built in temperature sensors, light sensors, and touch sensitivity.
+													Using Python, I built an intractive game of "Simon Says", with increasing levels of complexity. The program chooses a position between 
+													1-10 at random, which corresponds with a position on the LED board. The user must press the corresponding buttons at which point, the 
+													program will elect a new position into the array and coninue the protocal until an incorrect input is received at which point, the game will restart. 										</p>
 											</div>
 										</article>
 										<article>
@@ -84,8 +85,9 @@
 											<a href="https://github.com/Tomavetisyan/Python-Pokemon"  class="image"><img src="images/pokemon.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>Python-Pokemon Battle System</h4>
-												<p>Fresh out of learning Python3. This is a simplified version of the Pokemon battle system. I scraped off some JSON files for type advantages and
-													stat charts. Two trainers are allowed to select their pokemon and battle each other to the end.
+												<p>Using Python, I built a program to replicate a "Pokemon Battle" where two trainers battle against each other using six Pokemon each.
+													Using JSON, I read data from two files containing attributes about each Pokemon, as well as a file with type matchup information.
+													I implemented a Pokemon and Trainer class with constructors to build objects using data read from the JSON files, and helper functions to perform tasks related to the battle (attack, lose health, revive, etc.).
 												</p>
 											</div>
 										</article>
@@ -93,8 +95,15 @@
 											<a href="https://github.com/Tomavetisyan/C-Math-Solver"  class="image"><img src="images/math.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>C++ Math Solver</h4>
-												<p>C++ application using the key features of the language to develop a problem solver for 2D and 3D shapes. 
-													Later, I added unit testing using Microsoft's framework to debug the project.
+												<p>I built a C++ application to calculate mathematical attributes (angles, volume, circumference, length, etc.) for 2D and 3D shapes. 
+													I also used Microsoft's CPP Unit Test Framework to test the code with 100% coverage.
+
+													I created the class hierarchy for different shapes to inheiret variables and functions from the generic parent class.
+													For each class, I researched the related mathematical formulas for each shape and wrote the formulas in C++.
+													I used designated access to implement code privacy to secure non-public variables and functions. 
+													
+													I used Microsoft's CPP Unit Test Framework to test code coverage techniques including Statement Coverage, Decision Coverage, Branch Coverage, and Condition Coverage.
+
 												</p>
 											</div>
 										</article>
@@ -102,8 +111,11 @@
 											<a href="https://github.com/Tomavetisyan/C.O.O.L.---C-Object-Oriented-Language" class="image"><img src="images/cool.png" alt="" /></a>
 											<div class="inner">
 												<h4>C.O.O.L.---C-Object-Oriented-Language</h4>
-												<p>A compiler written in Java to translate our created language into C. 
-													encapsulating the essence of javas class and methods into C constructors. Tests were written using Maven.
+												<p> With a small team, we created a compiler using Java, which would trnslate and output workable C code. 
+													Our compiler would parse through the java, tokenize each syntax into a long array, parse through the array, and compile the new C code.
+													I created the parser that read in tokens and verified that the ouput expression is valid C code. The parser throws an exception
+													error when there is a syntax missing in the code. I also used the Maven framework to write unit tests.
+
 												</p>
 											</div>
 										</article>
@@ -111,8 +123,10 @@
 											<a href="https://github.com/Tomavetisyan/JavaScript-Paint" class="image"><img  src="images/paint.png" alt="" /></a>
 											<div class="inner">
 												<h4>JavaScript-Paint</h4>
-												<p>Multimedia web Paint Software using HTML5/CSS/Javascript using Jquary 
-													event listeners to recreate a paint application with html canvas.</p>
+												<p> I created a web based paint software using HTML5, CSS, and Javascript using Jquery.
+													I used event listeners to capture mouse interactions to perform paint tasks with html canvas. I designed and created the entire UI and icon design froms scratch. 
+													Users are able to perform tasks such as painting with a brush, adding shapes, changing color pallets, undo and redoing actions, saving their files, and much more.
+												</p>
 												<a href="Paint/paint.html" >Live Demo Link</a>
 											</div>
 										</article>
@@ -120,15 +134,18 @@
 											<a href="https://github.com/Tomavetisyan/Ticket-Kiosk-Requirments-Doc/blob/master/Comp%20582%20-%20Project%202%20-Ticket%20Kiosk.pdf" class="image"><img src="images/mctickets.png" alt="" /></a>
 											<div class="inner">
 												<h4>McTickets</h4>
-												<p>Software requirements specification document for a ticket kiosk system</p>
+												<p>I wrote a SRS (Software Requirements Specification) document to create a ticket kiosk system. This is a detailed 20 page document, with built in use cases and test scenarios
+													that could be used to implement a working system.
+												</p>
 											</div>
 										</article>
 										<article>
 											<a href="BarHop/BarHop.html" class="image"><img src="images/bar.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>BarHop</h4>
-												<p>React Native App built for niche audience of night time connoisseurs. The idea was great but the execution failed due to failed
-													leadership.
+												<p>A React Native social media app that uses Google-Maps and Uber-Ride-Request node modules with api requests to allow users to plan their night out.
+													The app would allow you to add the locations you wish to travel and and will request uber rides on your behalf when you are ready to leave. Bars can 
+													advertise themselves on the app with promotions and events. Users can add friends on the app and share geo-locations to meet up with each other.
 												</p>
 											</div>
 										</article>
@@ -142,13 +159,36 @@
 								<div class="container">
 									<h3>Experience</h3>
 									<p style="margin-left: 40px">
+										Customer portal for Buiness Banking Customers.
+										
+										Scrum/jira
+
+										Creating the user interface and functionality for the login screen with HTML and javascript.
+										Login screen has a username and password input field that sends a requests to the SQL server to confirm login identitiy.
+										Login information is created and given by the bank.
+										Locks account if too many invalid login attempts are made.
+										
+
+										Loading the outstanding queue, on the home page, of unposted transactions pulled from the SQL server using an api call.
+										User can open these transactions and reveiw the sender information and input receiver bank account information.
+										Input information will be sent to another SQL table to be and the wire operations will be notified via email.
+										The operator can pull the information from the email or SQL table
+
+										Filter functionality so the user can organize search for transactions based on dollar amount, date, name.
+
+										Users can select a completed transaction for more detailed information.
+										Information is pulled from the SQL database and can be downloaded as a PDF.
+
+
+										The bank will later take this information to send an outgoing wire
 									</p>
-									<p style="text-indent: 40px">Codecademy Author which is a new system in the works allowing a small set of users create content for their lessons.
-										The system is in it's early stages and the workload is changing as we go.
+									<p>
+										
 									</p>
-									<p style="text-indent: 40px">Mathnasium has been great to me. We make math make sense. We teach in the ideology of a growth mindset,
-                                        setting no upper boundaries to one's mind. That is an ideology I follow as a set myself to lead by example. Most of these skills 
-                                        have all been self taught throughout the year, so when you hear the phrase "fast learner", here is what I have to actually back that up.
+									<p style="text-indent: 40px">I worked as a codecadmy author on the forums to create and answer questions for people.
+									</p>
+									<p style="text-indent: 40px">Working and mathnasium to tutor k-12 students. I played the role of a totor and managed everyones lesson plans. 
+										I would  the behaviour and progress of students to their parents on a monthly basis.
 									</p>
 									<h3>Skills</h3>
 									<div class="language_container" id="language_container" >
